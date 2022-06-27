@@ -64,7 +64,7 @@ class Contact(db.Model):
     class_time = db.Column(db.String(150))
     user_token = db.Column(db.String, db.ForeignKey('user.token'), nullable=False)
 
-    def __init__(self, name, email, class_name, class_day, class_time, address, user_token, id=''):
+    def __init__(self, name, email, class_name, class_day, class_time, user_token, id=''):
         self.id = self.set_id()
         self.name = name
         self.email = email
